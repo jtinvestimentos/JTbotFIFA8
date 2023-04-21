@@ -6,7 +6,7 @@ import schedule
 import time
 
 def scrape_data():
-    url = 'https://www.aceodds.com/pt/bet365-transmissao-ao-vivo/futebol/e-soccer-live-arena-10-minutos-de-jogo.html'
+    url = 'https://www.aceodds.com/pt/bet365-transmissao-ao-vivo/futebol/e-soccer-battle-8-minutos-de-jogo.html'
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
     }
@@ -37,7 +37,7 @@ def scrape_data():
                 league = cells[1].find('a')['title'].split(' - ')[0].split(': ')[-1]
 
                 # Imprime os dados formatados
-                print('🏟️ LIGA: CLA (FIFA 10 minutos) -', league)
+                print('🏟️ LIGA: ESB (FIFA 8 minutos) -', league)
                 print('🎮 Times:', teams[0], 'x', teams[1])
                 print('🙍‍♂️ Players:', players[0], 'x', players[1])
                 print('⌚ Horário:', time_str)
